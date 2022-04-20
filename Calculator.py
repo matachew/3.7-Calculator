@@ -26,10 +26,13 @@ button8 = Button(main, text="8", padx=40, pady=20, command=add_to)
 button9 = Button(main, text="9", padx=40, pady=20, command=add_to)
 
 equalbutton = Button(main, text="=", padx=40, pady=20, command=add_to)
+clearbutton = Button(main, text="C", padx=40, pady=20, command=add_to)
 plusbutton = Button(main, text="+", padx=40, pady=20, command=add_to)
+minusbutton = Button(main, text="-", padx=40, pady=20, command=add_to)
+multiplybutton = Button(main, text="x", padx=40, pady=20, command=add_to)
+dividebutton = Button(main, text="/", padx=40, pady=20, command=add_to)
 
-
-
+                                                          
 # making button widgets or objects or something for the GUI
 
 button0.grid(row=4, column=0, columnspan = 2)
