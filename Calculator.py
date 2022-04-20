@@ -10,7 +10,7 @@ current.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 def add_to():
     return
 
-button0 = Button(main, text="0", padx=40, pady=20, command=add_to)
+button0 = Button(main, text="0", padx=80, pady=20, command=add_to)
 button1 = Button(main, text="1", padx=40, pady=20, command=add_to)
 button2 = Button(main, text="2", padx=40, pady=20, command=add_to)
 button3 = Button(main, text="3", padx=40, pady=20, command=add_to)
@@ -22,7 +22,7 @@ button8 = Button(main, text="8", padx=40, pady=20, command=add_to)
 button9 = Button(main, text="9", padx=40, pady=20, command=add_to)
 # making button widgets or objects or something for the GUI
 
-button0.grid(row=4, column=0)
+button0.grid(row=4, column=0, columnspan = 2)
 
 button1.grid(row=3, column=0)
 button2.grid(row=3, column=1)
