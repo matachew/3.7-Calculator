@@ -8,7 +8,7 @@ main.title("Calculator")
 main.resizable(False, False)
 
 current = Entry(main, width=35, borderwidth=5)
-current.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+current.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
 #e.insert(0, "")
 def add_to():
@@ -24,6 +24,9 @@ button6 = Button(main, text="6", padx=40, pady=20, command=add_to)
 button7 = Button(main, text="7", padx=40, pady=20, command=add_to)
 button8 = Button(main, text="8", padx=40, pady=20, command=add_to)
 button9 = Button(main, text="9", padx=40, pady=20, command=add_to)
+
+buttonplus = Button(main, text="+", padx=40, pady=20, command=add_to)
+
 # making button widgets or objects or something for the GUI
 
 button0.grid(row=4, column=0, columnspan = 2)
