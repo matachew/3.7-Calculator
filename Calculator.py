@@ -10,7 +10,9 @@ main.resizable(False, False)
 current = Entry(main, width=35, borderwidth=5)
 current.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
-#e.insert(0, "")
+def on_clear():
+    current.delete(0, END)
+
 def on_click(number):
     update = current.get()
     current.delete(0, END)
@@ -28,7 +30,7 @@ button8 = Button(main, text="8", padx=40, pady=20, command=lambda: on_click(8))
 button9 = Button(main, text="9", padx=40, pady=20, command=lambda: on_click(9))
 
 equalbutton = Button(main, text="=", padx=20, pady=20, command=lambda: on_click())
-clearbutton = Button(main, text="C", padx=20, pady=20, command=lambda: on_click())
+clearbutton = Button(main, text="C", padx=20, pady=20, command=on_clear)
 plusbutton = Button(main, text="+", padx=40, pady=20, command=lambda: on_click())
 minusbutton = Button(main, text="-", padx=20, pady=20, command=lambda: on_click())
 multiplybutton = Button(main, text="x", padx=20, pady=20, command=lambda: on_click())
