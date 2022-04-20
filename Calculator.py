@@ -25,7 +25,10 @@ button7 = Button(main, text="7", padx=40, pady=20, command=add_to)
 button8 = Button(main, text="8", padx=40, pady=20, command=add_to)
 button9 = Button(main, text="9", padx=40, pady=20, command=add_to)
 
-buttonplus = Button(main, text="+", padx=40, pady=20, command=add_to)
+equalbutton = Button(main, text="=", padx=40, pady=20, command=add_to)
+plusbutton = Button(main, text="+", padx=40, pady=20, command=add_to)
+
+
 
 # making button widgets or objects or something for the GUI
 
