@@ -49,4 +49,10 @@ button7.grid(row=1, column=0)
 button8.grid(row=1, column=1)
 button9.grid(row=1, column=2)
 
+clearbutton.grid(row=1, column=3)
+dividebutton.grid(row=2, column=3)
+multiplybutton.grid(row=3, column=3)
+minusbutton.grid(row=4, column=3)
+plusbutton.grid(row=4, column=2)
+
 main.mainloop()
