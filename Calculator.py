@@ -1,7 +1,11 @@
 from tkinter import *
 
+
+
 main = Tk()
 main.title("Calculator")
+
+main.resizable(False, False)
 
 current = Entry(main, width=35, borderwidth=5)
 current.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
@@ -10,7 +14,7 @@ current.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 def add_to():
     return
 
-button0 = Button(main, text="0", padx=80, pady=20, command=add_to)
+button0 = Button(main, text="0", padx=100, pady=20, command=add_to)
 button1 = Button(main, text="1", padx=40, pady=20, command=add_to)
 button2 = Button(main, text="2", padx=40, pady=20, command=add_to)
 button3 = Button(main, text="3", padx=40, pady=20, command=add_to)
