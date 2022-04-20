@@ -12,7 +12,9 @@ current.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
 #e.insert(0, "")
 def on_click(number):
-    return
+    #current.delete(0, END)
+    update = current.get()
+    current.insert(0, str(update) + str(number) )
 
 button0 = Button(main, text="0", padx=100, pady=20, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", padx=40, pady=20, command=lambda: on_click(1))
