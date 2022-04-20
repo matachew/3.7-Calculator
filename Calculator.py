@@ -22,15 +22,18 @@ button8 = Button(main, text="8", padx=40, pady=20, command=add_to)
 button9 = Button(main, text="9", padx=40, pady=20, command=add_to)
 # making button widgets or objects or something for the GUI
 
-button0.grid(row=, column=)
-button1.grid(row=, column=)
-button2.grid(row=, column=)
-button3.grid(row=, column=)
-button4.grid(row=, column=)
-button5.grid(row=, column=)
-button6.grid(row=, column=)
-button7.grid(row=, column=)
-button8.grid(row=, column=)
-button9.grid(row=, column=)
+button0.grid(row=4, column=0)
+
+button1.grid(row=3, column=0)
+button2.grid(row=3, column=1)
+button3.grid(row=3, column=2)
+
+button4.grid(row=2, column=0)
+button5.grid(row=2, column=1)
+button6.grid(row=2, column=2)
+
+button7.grid(row=1, column=0)
+button8.grid(row=1, column=1)
+button9.grid(row=1, column=2)
 
 main.mainloop()
