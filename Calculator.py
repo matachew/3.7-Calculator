@@ -73,11 +73,13 @@ button8.grid(row=2, column=1)
 button9.grid(row=2, column=2)
 
 clearbutton.grid(row=1, column=0)
-dividebutton.grid(row=2, column=3)
-multiplybutton.grid(row=3, column=3)
-minusbutton.grid(row=4, column=3)
-plusbutton.grid(row=4, column=2)
-equalbutton.grid(row=5, column=2, columnspan=2)
+dividebutton.grid(row=1, column=3)
+multiplybutton.grid(row=2, column=3)
+minusbutton.grid(row=3, column=3)
+plusbutton.grid(row=4, column=3)
+equalbutton.grid(row=5, column=3)
+decimalbutton.grid(row=5, column=2)
+
 main.mainloop()
 
 #Fn1 (l17) since we cant put function parameters through buttons we have to use lambda
