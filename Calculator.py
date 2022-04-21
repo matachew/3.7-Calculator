@@ -18,6 +18,18 @@ def on_click(number):
     current.delete(0, END)
     current.insert(0, str(update) + str(number) )
 
+def on_add():
+    int1 = current.get()
+    global num1
+    num1 = int(int1)
+    current.delete(0, END)
+
+def on_equal():
+    int2 = current.get()
+    current.delete(0, END)
+    current.insert(0, num1 + int(int2))
+
+
 button0 = Button(main, text="0", padx=100, pady=20, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", padx=40, pady=20, command=lambda: on_click(1))
 button2 = Button(main, text="2", padx=40, pady=20, command=lambda: on_click(2))
@@ -29,12 +41,14 @@ button7 = Button(main, text="7", padx=40, pady=20, command=lambda: on_click(7))
 button8 = Button(main, text="8", padx=40, pady=20, command=lambda: on_click(8))
 button9 = Button(main, text="9", padx=40, pady=20, command=lambda: on_click(9))
 
-equalbutton = Button(main, text="=", padx=20, pady=20, command=lambda: on_click())
+equalbutton = Button(main, text="=", padx=20, pady=20, command=on_equal)
 clearbutton = Button(main, text="C", padx=20, pady=20, command=on_clear)
-plusbutton = Button(main, text="+", padx=40, pady=20, command=lambda: on_click())
+plusbutton = Button(main, text="+", padx=40, pady=20, command=on_add)
 minusbutton = Button(main, text="-", padx=20, pady=20, command=lambda: on_click())
 multiplybutton = Button(main, text="x", padx=20, pady=20, command=lambda: on_click())
 dividebutton = Button(main, text="/", padx=20, pady=20, command=lambda: on_click())
+
+de
 
                                                           
 # making button widgets or objects or something for the GUI
@@ -58,7 +72,7 @@ dividebutton.grid(row=2, column=3)
 multiplybutton.grid(row=3, column=3)
 minusbutton.grid(row=4, column=3)
 plusbutton.grid(row=4, column=2)
-
+equalbutton.grid(row=5, column=2, columnspan=2)
 main.mainloop()
 
 #Fn1 (l17) since we cant put function parameters through buttons we have to use lambda
