@@ -1,5 +1,4 @@
 from tkinter import *
-from unicodedata import decimal
 
 
 
@@ -19,16 +18,47 @@ def on_click(number):
     current.delete(0, END)
     current.insert(0, str(update) + str(number) )
 
-def on_add():
-    int1 = current.get()
-    global num1
-    num1 = int(int1)
-    current.delete(0, END)
-
 def on_equal():
     int2 = current.get()
     current.delete(0, END)
     current.insert(0, num1 + int(int2))
+
+def on_add():
+    int1 = current.get()
+    global num1
+    global operation 
+    operation = "addition"
+    num1 = int(int1)
+    current.delete(0, END)
+
+
+def on_minus():
+    int1 = current.get()
+    global num1
+    global operation 
+    operation = "addition"
+    num1 = int(int1)
+    current.delete(0, END)
+
+def on_multiply():
+    int1 = current.get()
+    global num1
+    global operation 
+    operation = "addition"
+    num1 = int(int1)
+    current.delete(0, END)
+
+
+def on_divide():
+    int1 = current.get()
+    global num1
+    global operation 
+    operation = "addition"
+    num1 = int(int1)
+    current.delete(0, END)
+
+
+
 
 def on_decimal():
     return
