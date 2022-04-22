@@ -23,13 +23,13 @@ def on_equal():
     current.delete(0, END)
 
     if operation == "addition":
-        current.insert(0, num1 + int(int2))
+        current.insert(0, num1 + float(int2))
     if operation == "subtraction":
-        current.insert(0, num1 - int(int2))
+        current.insert(0, num1 - float(int2))
     if operation == "multiplication":
-        current.insert(0, num1 * int(int2))
+        current.insert(0, num1 * float(int2))
     if operation == "division":
-        current.insert(0, num1 / int(int2))
+        current.insert(0, num1 / float(int2))
 
 
 
@@ -39,7 +39,7 @@ def on_add():
     global num1
     global operation 
     operation = "addition"
-    num1 = int(int1)
+    num1 = float(int1)
     current.delete(0, END)
 
 
@@ -48,7 +48,7 @@ def on_minus():
     global num1
     global operation 
     operation = "subtraction"
-    num1 = int(int1)
+    num1 = float(int1)
     current.delete(0, END)
 
 def on_multiply():
@@ -56,7 +56,7 @@ def on_multiply():
     global num1
     global operation 
     operation = "multiplication"
-    num1 = int(int1)
+    num1 = float(int1)
     current.delete(0, END)
 
 
@@ -65,7 +65,7 @@ def on_divide():
     global num1
     global operation 
     operation = "division"
-    num1 = int(int1)
+    num1 = float(int1)
     current.delete(0, END)
 
 
