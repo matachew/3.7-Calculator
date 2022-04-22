@@ -21,7 +21,16 @@ def on_click(number):
 def on_equal():
     int2 = current.get()
     current.delete(0, END)
-    #current.insert(0, num1 + int(int2))
+
+    if operation == "addition":
+        pass
+    if operation == "subtraction":
+        pass
+    if operation == "multiplication":
+        pass
+    if operation == "division":
+        pass
+
 
 
 
