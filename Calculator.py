@@ -21,7 +21,9 @@ def on_click(number):
 def on_equal():
     int2 = current.get()
     current.delete(0, END)
-    current.insert(0, num1 + int(int2))
+    #current.insert(0, num1 + int(int2))
+
+
 
 def on_add():
     int1 = current.get()
@@ -36,7 +38,7 @@ def on_minus():
     int1 = current.get()
     global num1
     global operation 
-    operation = "addition"
+    operation = "subtraction"
     num1 = int(int1)
     current.delete(0, END)
 
@@ -44,7 +46,7 @@ def on_multiply():
     int1 = current.get()
     global num1
     global operation 
-    operation = "addition"
+    operation = "multiplication"
     num1 = int(int1)
     current.delete(0, END)
 
@@ -53,7 +55,7 @@ def on_divide():
     int1 = current.get()
     global num1
     global operation 
-    operation = "addition"
+    operation = "division"
     num1 = int(int1)
     current.delete(0, END)
 
@@ -79,11 +81,11 @@ button9 = Button(main, text="9", padx=20, pady=20, command=lambda: on_click(9))
 equalbutton = Button(main, text="=", padx=20, pady=20, command=on_equal)
 clearbutton = Button(main, text="C", padx=20, pady=20, command=on_clear)
 plusbutton = Button(main, text="+", padx=20, pady=20, command=on_add)
-minusbutton = Button(main, text="-", padx=20, pady=20, command=lambda: on_click())
+minusbutton = Button(main, text="-", padx=20, pady=20, command=on_click())
 multiplybutton = Button(main, text="x", padx=20, pady=20, command=lambda: on_click())
 dividebutton = Button(main, text="/", padx=20, pady=20, command=lambda: on_click())
 
-decimalbutton = Button(main, text=".", padx=20, pady=20, command=on_decimal)
+decimalbutton = Button(main, text=".", padx=20, pady=20, command=lambda: on_click("."))
 
                                                           
 # making button widgets or objects or something for the GUI
