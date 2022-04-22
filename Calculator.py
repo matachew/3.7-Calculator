@@ -23,13 +23,13 @@ def on_equal():
     current.delete(0, END)
 
     if operation == "addition":
-        pass
+        current.insert(0, num1 + int(int2))
     if operation == "subtraction":
-        pass
+        current.insert(0, num1 - int(int2))
     if operation == "multiplication":
-        pass
+        current.insert(0, num1 * int(int2))
     if operation == "division":
-        pass
+        current.insert(0, num1 / int(int2))
 
 
 
@@ -90,9 +90,9 @@ button9 = Button(main, text="9", padx=20, pady=20, command=lambda: on_click(9))
 equalbutton = Button(main, text="=", padx=20, pady=20, command=on_equal)
 clearbutton = Button(main, text="C", padx=20, pady=20, command=on_clear)
 plusbutton = Button(main, text="+", padx=20, pady=20, command=on_add)
-minusbutton = Button(main, text="-", padx=20, pady=20, command=on_click())
-multiplybutton = Button(main, text="x", padx=20, pady=20, command=lambda: on_click())
-dividebutton = Button(main, text="/", padx=20, pady=20, command=lambda: on_click())
+minusbutton = Button(main, text="-", padx=20, pady=20, command=on_minus)
+multiplybutton = Button(main, text="x", padx=20, pady=20, command=on_multiply)
+dividebutton = Button(main, text="/", padx=20, pady=20, command=on_divide)
 
 decimalbutton = Button(main, text=".", padx=20, pady=20, command=lambda: on_click("."))
 
