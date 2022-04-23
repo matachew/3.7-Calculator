@@ -76,20 +76,20 @@ def on_divide():
 
 # create objects for each image for hte buttons
 
-img0 = PhotoImage(file="0.png")
-img1 = PhotoImage(file = r"1.png")
-img2 = PhotoImage(file = r"C:\3.7-Calculator\2.png")
-img3 = PhotoImage(file = r"C:\3.7-Calculator\3.png")
-img4 = PhotoImage(file = r"C:\3.7-Calculator\4.png")
-img5 = PhotoImage(file = r"C:\3.7-Calculator\5.png")
+img0 = PhotoImage(file="3.7-Calculator/0.png")
+img1 = PhotoImage(file="3.7-Calculator/1.png")
+img2 = PhotoImage(file="C:/3.7-Calculator/2.png")
+img3 = PhotoImage(file="C:\3.7-Calculator\3.png")
+img4 = PhotoImage(file="C:\3.7-Calculator\4.png")
+img5 = PhotoImage(file="\3.7-Calculator\5.png")
 img6 = PhotoImage(file = r"C:\3.7-Calculator\6.png")
 img7 = PhotoImage(file = r"C:\3.7-Calculator\7.png")
 img8 = PhotoImage(file = r"C:\3.7-Calculator\8.png")
 img9 = PhotoImage(file = r"C:\3.7-Calculator\9.png")
 
-img0 = PhotoImage()
-img0 = PhotoImage()
-img0 = PhotoImage()
+imgm = PhotoImage()
+imgp = PhotoImage()
+imgs = PhotoImage()
 
 
 button0 = Button(main, text="0", padx=65, pady=20, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
