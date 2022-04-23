@@ -87,9 +87,9 @@ img7 = PhotoImage(file="3.7-Calculator/7.png")
 img8 = PhotoImage(file="3.7-Calculator/8.png")
 img9 = PhotoImage(file="3.7-Calculator/9.png")
 
-imgm = PhotoImage()
-imgp = PhotoImage()
-imgs = PhotoImage()
+imgmultiply = PhotoImage(file="3.7-Calculator/multiply")
+imgp = PhotoImage(file="3.7-Calculator/multiply")
+imgs = PhotoImage(file="3.7-Calculator/multiply")
 
 
 button0 = Button(main, text="0", padx=65, pady=20, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
