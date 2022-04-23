@@ -78,7 +78,7 @@ def on_divide():
 
 img0 = PhotoImage(file="3.7-Calculator/0.png")
 img1 = PhotoImage(file="3.7-Calculator/1.png")
-img2 = PhotoImage(file="/3.7-Calculator/2.png")
+img2 = PhotoImage(file="3.7-Calculator/2.png")
 img3 = PhotoImage(file="3.7-Calculator/3.png")
 img4 = PhotoImage(file="3.7-Calculator/4.png")
 img5 = PhotoImage(file="3.7-Calculator/5.png")
@@ -87,13 +87,13 @@ img7 = PhotoImage(file="3.7-Calculator/7.png")
 img8 = PhotoImage(file="3.7-Calculator/8.png")
 img9 = PhotoImage(file="3.7-Calculator/9.png")
 
-imgmultiply = PhotoImage(file="3.7-Calculator/multiply")
-imgplus = PhotoImage(file="3.7-Calculator/plus")
-imgminus = PhotoImage(file="3.7-Calculator/minus")
-imgdivide = PhotoImage(file="3.7-Calculator/divide")
+imgmultiply = PhotoImage(file="3.7-Calculator/multiply.png")
+imgplus = PhotoImage(file="3.7-Calculator/plus.png")
+imgminus = PhotoImage(file="3.7-Calculator/minus.png")
+imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
 
 
-button0 = Button(main, text="0", padx=65, pady=20, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
+button0 = Button(main, text="0", padx=65, pady=20, image=img0, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", padx=20, pady=20, command=lambda: on_click(1))
 button2 = Button(main, text="2", padx=20, pady=20, command=lambda: on_click(2))
 button3 = Button(main, text="3", padx=20, pady=20, command=lambda: on_click(3))
