@@ -5,7 +5,7 @@ from tkinter import *
 
 main = Tk()
 main.title("Calculator")
-main.configure(bg="black")
+main.configure(bg="#353d4a")
 
 main.resizable(False, False)
 
