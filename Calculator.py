@@ -1,4 +1,5 @@
 from tkinter import *
+from turtle import bgcolor
 
 
 
@@ -104,7 +105,7 @@ szdimg8 = img8.subsample(5,5)
 szdimg9 = img9.subsample(5,5)
 
 
-button0 = Button(main, text="0", padx=0, pady=0, border=0, image=szdimg0, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
+button0 = Button(main, text="0", bd=0, borderwidth=0, highlightthickness=0, bg="#24292e", padx=0, pady=0, border=0, image=szdimg0, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", padx=20, pady=20, image=szdimg1, command=lambda: on_click(1))
 button2 = Button(main, text="2", padx=20, pady=20, image=szdimg2, command=lambda: on_click(2))
 button3 = Button(main, text="3", padx=20, pady=20, image=szdimg3, command=lambda: on_click(3))
