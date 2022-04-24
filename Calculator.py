@@ -92,8 +92,9 @@ imgplus = PhotoImage(file="3.7-Calculator/plus.png")
 imgminus = PhotoImage(file="3.7-Calculator/minus.png")
 imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
 
+szdimg0 = img0.subsample(5,5)
 
-button0 = Button(main, text="0", padx=65, pady=20, image=img0, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
+button0 = Button(main, text="0", padx=65, pady=20, image=szdimg0, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", padx=20, pady=20, command=lambda: on_click(1))
 button2 = Button(main, text="2", padx=20, pady=20, command=lambda: on_click(2))
 button3 = Button(main, text="3", padx=20, pady=20, command=lambda: on_click(3))
