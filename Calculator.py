@@ -93,14 +93,15 @@ imgminus = PhotoImage(file="3.7-Calculator/minus.png")
 imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
 
 szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
-szdimg0 = img0.subsample(5,5)
+szdimg1 = img1.subsample(5,5)
+szdimg2 = img2.subsample(5,5)
+szdimg3 = img3.subsample(5,5)
+szdimg4 = img4.subsample(5,5)
+szdimg5 = img5.subsample(5,5)
+szdimg6 = img6.subsample(5,5)
+szdimg7 = img7.subsample(5,5)
+szdimg8 = img8.subsample(5,5)
+szdimg9 = img9.subsample(5,5)
 
 
 button0 = Button(main, text="0", padx=0, pady=0, border=0, image=szdimg0, command=lambda: on_click(0)) #footnote 1 at bottom about Lambda
