@@ -93,21 +93,11 @@ imgplus = PhotoImage(file="3.7-Calculator/plus.png")
 imgminus = PhotoImage(file="3.7-Calculator/minus.png")
 imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
 
-szdimg0 = img0.subsample(3,3)
-szdimg1 = img1.subsample(3,3)
-szdimg2 = img2.subsample(3,3)
-szdimg3 = img3.subsample(3,3)
-szdimg4 = img4.subsample(3,3)
-szdimg5 = img5.subsample(3,3)
-szdimg6 = img6.subsample(3,3)
-szdimg7 = img7.subsample(3,3)
-szdimg8 = img8.subsample(3,3)
-szdimg9 = img9.subsample(3,3)
 
 
-button0 = tk.Button(main, text="0", image=szdimg0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
-button1 = Button(main, text="1", image=szdimg1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
-button2 = Button(main, text="2", image=szdimg2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button0 = tk.Button(main, text="0", image=img0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
+button1 = Button(main, text="1", image=img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
+button2 = Button(main, text="2", image=img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button3 = Button(main, text="3", bg="#24292e", image=szdimg3, command=lambda: on_click(3), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button4 = Button(main, text="4", image=szdimg4, command=lambda: on_click(4), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button5 = Button(main, text="5", image=szdimg5, command=lambda: on_click(5), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
