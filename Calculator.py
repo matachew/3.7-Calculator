@@ -92,6 +92,7 @@ imgmultiply = PhotoImage(file="3.7-Calculator/multiply.png")
 imgplus = PhotoImage(file="3.7-Calculator/plus.png")
 imgminus = PhotoImage(file="3.7-Calculator/minus.png")
 imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
+imgequal = PhotoImage(file="3.7-Calculator/equal.png")
 
 
 
@@ -106,12 +107,12 @@ button7 = Button(main, text="7", image=img7, command=lambda: on_click(7), border
 button8 = Button(main, text="8", image=img8, command=lambda: on_click(8), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button9 = Button(main, text="9", image=img9, command=lambda: on_click(9), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 
-equalbutton = Button(main, image=img text="=", padx=20, pady=20, command=on_equal)
-clearbutton = Button(main, text="C", padx=2, pady=20, command=on_clear)
-plusbutton = Button(main, text="+", padx=20, pady=20, command=on_add)
-minusbutton = Button(main, text="-", padx=20, pady=20, command=on_minus)
-multiplybutton = Button(main, text="x", padx=20, pady=20, command=on_multiply)
-dividebutton = Button(main, text="/", padx=20, pady=20, command=on_divide)
+equalbutton = Button(main, image=imgequal, text="=", padx=20, pady=20, command=on_equal)
+clearbutton = Button(main, text="C",  padx=2, pady=20, command=on_clear)
+plusbutton = Button(main, text="+", image=imgplus, padx=20, pady=20, command=on_add)
+minusbutton = Button(main, text="-", padx=20, image=imgminus, pady=20, command=on_minus)
+multiplybutton = Button(main, text="x", padx=20, pady=20, image=imgmultiply, command=on_multiply)
+dividebutton = Button(main, text="/", padx=20, pady=20,image=imgdivide, command=on_divide)
 
 decimalbutton = Button(main, text=".", padx=20, pady=20, command=lambda: on_click("."))
 
