@@ -1,7 +1,5 @@
 from tkinter import *
-from turtle import bgcolor
-import tkinter as tk
-
+from PIL import Image
 
 main = Tk()
 main.title("Calculator")
@@ -77,7 +75,7 @@ def on_divide():
 
 # create objects for each image for hte buttons
 
-img0 = PhotoImage(file="3.7-Calculator/0.png")
+img0 = Image.open("3.7-Calculator/0.png")
 img1 = PhotoImage(file="3.7-Calculator/1.png")
 img2 = PhotoImage(file="3.7-Calculator/2.png")
 img3 = PhotoImage(file="3.7-Calculator/3.png")
@@ -94,9 +92,9 @@ imgminus = PhotoImage(file="3.7-Calculator/minus.png")
 imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
 imgequal = PhotoImage(file="3.7-Calculator/equal.png")
 
+szdimg0 = img0.resize((300, 300))
 
-
-button0 = tk.Button(main, text="0", image=img0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
+button0 = Button(main, text="0", image=szdimg0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", image=img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
 button2 = Button(main, text="2", image=img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button3 = Button(main, text="3", bg="#24292e", image=img3, command=lambda: on_click(3), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
@@ -112,7 +110,7 @@ clearbutton = Button(main, text="C",  padx=2, pady=20, command=on_clear)
 plusbutton = Button(main, text="+", image=imgplus, padx=20, pady=20, command=on_add)
 minusbutton = Button(main, text="-", padx=20, image=imgminus, pady=20, command=on_minus)
 multiplybutton = Button(main, text="x", padx=20, pady=20, image=imgmultiply, command=on_multiply)
-dividebutton = Button(main, text="/", padx=20, pady=20,image=imgdivide, command=on_divide)
+dividebutton = Button(main, text="/", padx=20, pady=20, image=imgdivide, command=on_divide)
 
 decimalbutton = Button(main, text=".", padx=20, pady=20, command=lambda: on_click("."))
 
