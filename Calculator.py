@@ -1,5 +1,5 @@
 from tkinter import *
-from PIL import Image
+from PIL import Image, ImageTk
 
 main = Tk()
 main.title("Calculator")
@@ -92,9 +92,11 @@ imgminus = PhotoImage(file="3.7-Calculator/minus.png")
 imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
 imgequal = PhotoImage(file="3.7-Calculator/equal.png")
 
-szdimg0 = img0.resize((300, 300))
+szdimg0 = img0.resize((300, 300), Image.ANTIALIAS)
 
-button0 = Button(main, text="0", image=szdimg0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
+new_image= ImageTk.PhotoImage(szdimg0)
+
+button0 = Button(main, text="0", image=new_image, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", image=img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
 button2 = Button(main, text="2", image=img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button3 = Button(main, text="3", bg="#24292e", image=img3, command=lambda: on_click(3), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
@@ -105,14 +107,14 @@ button7 = Button(main, text="7", image=img7, command=lambda: on_click(7), border
 button8 = Button(main, text="8", image=img8, command=lambda: on_click(8), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button9 = Button(main, text="9", image=img9, command=lambda: on_click(9), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 
-equalbutton = Button(main, image=imgequal, text="=", padx=20, pady=20, command=on_equal)
-clearbutton = Button(main, text="C",  padx=2, pady=20, command=on_clear)
-plusbutton = Button(main, text="+", image=imgplus, padx=20, pady=20, command=on_add)
-minusbutton = Button(main, text="-", padx=20, image=imgminus, pady=20, command=on_minus)
-multiplybutton = Button(main, text="x", padx=20, pady=20, image=imgmultiply, command=on_multiply)
-dividebutton = Button(main, text="/", padx=20, pady=20, image=imgdivide, command=on_divide)
+equalbutton = Button(main, image=imgequal, text="=", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_equal)
+clearbutton = Button(main, text="C",  borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_clear)
+plusbutton = Button(main, text="+", image=imgplus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_add)
+minusbutton = Button(main, text="-", image=imgminus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_minus)
+multiplybutton = Button(main, text="x", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=imgmultiply, command=on_multiply)
+dividebutton = Button(main, text="/", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=imgdivide, command=on_divide)
 
-decimalbutton = Button(main, text=".", padx=20, pady=20, command=lambda: on_click("."))
+decimalbutton = Button(main, text=".", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=lambda: on_click("."))
 
                                                           
 # making button widgets or objects or something for the GUI
