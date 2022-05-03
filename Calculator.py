@@ -93,11 +93,14 @@ imgdivide = PhotoImage(file="3.7-Calculator/divide.png")
 imgequal = PhotoImage(file="3.7-Calculator/equal.png")
 
 szdimg0 = img0.resize((300, 300), Image.ANTIALIAS)
+rzd_img0= ImageTk.PhotoImage(szdimg0)
 
-new_image= ImageTk.PhotoImage(szdimg0)
+szdimg1 = img1.resize((100, 100), Image.ANTIALIAS)
+rzd_img1= ImageTk.PhotoImage(szdimg1)
 
-button0 = Button(main, text="0", image=new_image, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
-button1 = Button(main, text="1", image=img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
+
+button0 = Button(main, text="0", image=rzd_img0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
+button1 = Button(main, text="1", image=rzd_img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
 button2 = Button(main, text="2", image=img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button3 = Button(main, text="3", bg="#24292e", image=img3, command=lambda: on_click(3), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button4 = Button(main, text="4", image=img4, command=lambda: on_click(4), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
