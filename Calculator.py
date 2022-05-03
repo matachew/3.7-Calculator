@@ -73,7 +73,7 @@ def on_divide():
 
 
 
-# create objects for each image for hte buttons
+# get the image files to overlay the buttons
 
 img0 = Image.open("3.7-Calculator/0.png")
 img1 = Image.open("3.7-Calculator/1.png")
@@ -92,11 +92,53 @@ imgminus = Image.open("3.7-Calculator/minus.png")
 imgdivide = Image.open("3.7-Calculator/divide.png")
 imgequal = Image.open("3.7-Calculator/equal.png")
 
+#resize images
 szdimg0 = img0.resize((300, 300), Image.ANTIALIAS)
 rzd_img0= ImageTk.PhotoImage(szdimg0)
 
 szdimg1 = img1.resize((100, 100), Image.ANTIALIAS)
 rzd_img1= ImageTk.PhotoImage(szdimg1)
+
+szdimg2 = img2.resize((100, 100), Image.ANTIALIAS)
+rzd_img2= ImageTk.PhotoImage(szdimg2)
+
+szdimg3 = img3.resize((100, 100), Image.ANTIALIAS)
+rzd_img3= ImageTk.PhotoImage(szdimg3)
+
+szdimg4 = img4.resize((100, 100), Image.ANTIALIAS)
+rzd_img4= ImageTk.PhotoImage(szdimg4)
+
+szdimg5 = img5.resize((100, 100), Image.ANTIALIAS)
+rzd_img5= ImageTk.PhotoImage(szdimg5)
+
+szdimg6 = img6.resize((100, 100), Image.ANTIALIAS)
+rzd_img6= ImageTk.PhotoImage(szdimg6)
+
+szdimg7 = img7.resize((100, 100), Image.ANTIALIAS)
+rzd_img7= ImageTk.PhotoImage(szdimg7)
+
+szdimg8 = img8.resize((100, 100), Image.ANTIALIAS)
+rzd_img8= ImageTk.PhotoImage(szdimg8)
+
+szdimg9 = img9.resize((100, 100), Image.ANTIALIAS)
+rzd_img9= ImageTk.PhotoImage(szdimg9)
+
+szdimgequal = imgequal.resize((100, 100), Image.ANTIALIAS)
+rzd_imgequal= ImageTk.PhotoImage(szdimgequal)
+
+szdimgdivide = imgdivide.resize((100, 100), Image.ANTIALIAS)
+rzd_imgdivide= ImageTk.PhotoImage(szdimgdivide)
+
+szdimgmultiply = imgmultiply.resize((100, 100), Image.ANTIALIAS)
+rzd_imgmultiply= ImageTk.PhotoImage(szdimgmultiply)
+
+szdimgminus = imgminus.resize((100, 100), Image.ANTIALIAS)
+rzd_imgminus= ImageTk.PhotoImage(szdimgminus)
+
+szdimgplus = imgplus.resize((100, 100), Image.ANTIALIAS)
+rzd_imgplus= ImageTk.PhotoImage(szdimgplus)
+
+
 
 
 button0 = Button(main, text="0", image=rzd_img0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
