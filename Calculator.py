@@ -102,49 +102,49 @@ imgdivide = Image.open("divide.png")
 imgequal = Image.open("equal.png")
 
 #resize images
-szdimg0 = img0.resize((100, 50), Image.ANTIALIAS)
+szdimg0 = img0.resize((165, 75), Image.ANTIALIAS)
 rzd_img0= ImageTk.PhotoImage(szdimg0)
 
-szdimg1 = img1.resize((50, 50), Image.ANTIALIAS)
+szdimg1 = img1.resize((75, 75), Image.ANTIALIAS)
 rzd_img1= ImageTk.PhotoImage(szdimg1)
 
-szdimg2 = img2.resize((50, 100), Image.ANTIALIAS)
+szdimg2 = img2.resize((75, 75), Image.ANTIALIAS)
 rzd_img2= ImageTk.PhotoImage(szdimg2)
 
-szdimg3 = img3.resize((100, 100), Image.ANTIALIAS)
+szdimg3 = img3.resize((75, 75), Image.ANTIALIAS)
 rzd_img3= ImageTk.PhotoImage(szdimg3)
 
-szdimg4 = img4.resize((100, 100), Image.ANTIALIAS)
+szdimg4 = img4.resize((75, 75), Image.ANTIALIAS)
 rzd_img4= ImageTk.PhotoImage(szdimg4)
 
-szdimg5 = img5.resize((100, 100), Image.ANTIALIAS)
+szdimg5 = img5.resize((75, 75), Image.ANTIALIAS)
 rzd_img5= ImageTk.PhotoImage(szdimg5)
 
-szdimg6 = img6.resize((100, 100), Image.ANTIALIAS)
+szdimg6 = img6.resize((75, 75), Image.ANTIALIAS)
 rzd_img6= ImageTk.PhotoImage(szdimg6)
 
-szdimg7 = img7.resize((100, 100), Image.ANTIALIAS)
+szdimg7 = img7.resize((75, 75), Image.ANTIALIAS)
 rzd_img7= ImageTk.PhotoImage(szdimg7)
 
-szdimg8 = img8.resize((100, 100), Image.ANTIALIAS)
+szdimg8 = img8.resize((75, 75), Image.ANTIALIAS)
 rzd_img8= ImageTk.PhotoImage(szdimg8)
 
-szdimg9 = img9.resize((100, 100), Image.ANTIALIAS)
+szdimg9 = img9.resize((75, 75), Image.ANTIALIAS)
 rzd_img9= ImageTk.PhotoImage(szdimg9)
 
-szdimgequal = imgequal.resize((100, 100), Image.ANTIALIAS)
+szdimgequal = imgequal.resize((75, 75), Image.ANTIALIAS)
 rzd_imgequal= ImageTk.PhotoImage(szdimgequal)
 
-szdimgdivide = imgdivide.resize((100, 100), Image.ANTIALIAS)
+szdimgdivide = imgdivide.resize((75, 75), Image.ANTIALIAS)
 rzd_imgdivide= ImageTk.PhotoImage(szdimgdivide)
 
-szdimgmultiply = imgmultiply.resize((100, 100), Image.ANTIALIAS)
+szdimgmultiply = imgmultiply.resize((75, 75), Image.ANTIALIAS)
 rzd_imgmultiply= ImageTk.PhotoImage(szdimgmultiply)
 
-szdimgminus = imgminus.resize((100, 100), Image.ANTIALIAS)
+szdimgminus = imgminus.resize((75, 75), Image.ANTIALIAS)
 rzd_imgminus= ImageTk.PhotoImage(szdimgminus)
 
-szdimgplus = imgplus.resize((100, 100), Image.ANTIALIAS)
+szdimgplus = imgplus.resize((75, 75), Image.ANTIALIAS)
 rzd_imgplus= ImageTk.PhotoImage(szdimgplus)
 
 
