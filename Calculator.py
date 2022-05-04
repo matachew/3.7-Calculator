@@ -102,13 +102,13 @@ imgdivide = Image.open("divide.png")
 imgequal = Image.open("equal.png")
 
 #resize images
-szdimg0 = img0.resize((300, 300), Image.ANTIALIAS)
+szdimg0 = img0.resize((100, 50), Image.ANTIALIAS)
 rzd_img0= ImageTk.PhotoImage(szdimg0)
 
-szdimg1 = img1.resize((100, 100), Image.ANTIALIAS)
+szdimg1 = img1.resize((50, 50), Image.ANTIALIAS)
 rzd_img1= ImageTk.PhotoImage(szdimg1)
 
-szdimg2 = img2.resize((100, 100), Image.ANTIALIAS)
+szdimg2 = img2.resize((50, 100), Image.ANTIALIAS)
 rzd_img2= ImageTk.PhotoImage(szdimg2)
 
 szdimg3 = img3.resize((100, 100), Image.ANTIALIAS)
@@ -152,21 +152,21 @@ rzd_imgplus= ImageTk.PhotoImage(szdimgplus)
 
 button0 = Button(main, text="0", image=rzd_img0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", image=rzd_img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
-button2 = Button(main, text="2", image=img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
-button3 = Button(main, text="3", bg="#24292e", image=img3, command=lambda: on_click(3), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
-button4 = Button(main, text="4", image=img4, command=lambda: on_click(4), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
-button5 = Button(main, text="5", image=img5, command=lambda: on_click(5), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
-button6 = Button(main, text="6", image=img6, command=lambda: on_click(6), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
-button7 = Button(main, text="7", image=img7, command=lambda: on_click(7), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
-button8 = Button(main, text="8", image=img8, command=lambda: on_click(8), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
-button9 = Button(main, text="9", image=img9, command=lambda: on_click(9), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button2 = Button(main, text="2", image=rzd_img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button3 = Button(main, text="3", bg="#24292e", image=rzd_img3, command=lambda: on_click(3), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button4 = Button(main, text="4", image=rzd_img4, command=lambda: on_click(4), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button5 = Button(main, text="5", image=rzd_img5, command=lambda: on_click(5), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button6 = Button(main, text="6", image=rzd_img6, command=lambda: on_click(6), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button7 = Button(main, text="7", image=rzd_img7, command=lambda: on_click(7), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button8 = Button(main, text="8", image=rzd_img8, command=lambda: on_click(8), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button9 = Button(main, text="9", image=rzd_img9, command=lambda: on_click(9), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 
-equalbutton = Button(main, image=imgequal, text="=", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_equal)
+equalbutton = Button(main, image=rzd_imgequal, text="=", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_equal)
 clearbutton = Button(main, text="C",  borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_clear)
-plusbutton = Button(main, text="+", image=imgplus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_add)
-minusbutton = Button(main, text="-", image=imgminus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_minus)
-multiplybutton = Button(main, text="x", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=imgmultiply, command=on_multiply)
-dividebutton = Button(main, text="/", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=imgdivide, command=on_divide)
+plusbutton = Button(main, text="+", image=rzd_imgplus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_add)
+minusbutton = Button(main, text="-", image=rzd_imgminus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_minus)
+multiplybutton = Button(main, text="x", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=rzd_imgmultiply, command=on_multiply)
+dividebutton = Button(main, text="/", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=rzd_imgdivide, command=on_divide)
 
 decimalbutton = Button(main, text=".", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=lambda: on_click("."))
 
