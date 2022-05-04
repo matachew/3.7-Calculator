@@ -100,6 +100,8 @@ imgplus = Image.open("plus.png")
 imgminus = Image.open("minus.png")
 imgdivide = Image.open("divide.png")
 imgequal = Image.open("equal.png")
+imgclear =Image.open("clear.png")
+imgdecimal = Image.open("decimal.png")
 
 #resize images
 szdimg0 = img0.resize((165, 75), Image.ANTIALIAS)
@@ -147,8 +149,11 @@ rzd_imgminus= ImageTk.PhotoImage(szdimgminus)
 szdimgplus = imgplus.resize((75, 75), Image.ANTIALIAS)
 rzd_imgplus= ImageTk.PhotoImage(szdimgplus)
 
+szdimgclear = imgclear.resize((75, 75), Image.ANTIALIAS)
+rzd_imgclear= ImageTk.PhotoImage(szdimgclear)
 
-
+szdimgdecimal = imgdecimal.resize((75, 75), Image.ANTIALIAS)
+rzd_imgdecimal= ImageTk.PhotoImage(szdimgdecimal)
 
 button0 = Button(main, text="0", image=rzd_img0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
 button1 = Button(main, text="1", image=rzd_img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
@@ -162,13 +167,13 @@ button8 = Button(main, text="8", image=rzd_img8, command=lambda: on_click(8), bo
 button9 = Button(main, text="9", image=rzd_img9, command=lambda: on_click(9), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 
 equalbutton = Button(main, image=rzd_imgequal, text="=", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_equal)
-clearbutton = Button(main, text="C",  borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_clear)
+clearbutton = Button(main, text="C",  borderwidth=0, image=rzd_imgclear, highlightthickness=0, padx=0, pady=0, bd=0, command=on_clear)
 plusbutton = Button(main, text="+", image=rzd_imgplus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_add)
 minusbutton = Button(main, text="-", image=rzd_imgminus, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=on_minus)
 multiplybutton = Button(main, text="x", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=rzd_imgmultiply, command=on_multiply)
 dividebutton = Button(main, text="/", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, image=rzd_imgdivide, command=on_divide)
 
-decimalbutton = Button(main, text=".", borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=lambda: on_click("."))
+decimalbutton = Button(main, text=".", image=rzd_imgdecimal, borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0, command=lambda: on_click("."))
 
                                                           
 # making button widgets or objects or something for the GUI
