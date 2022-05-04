@@ -76,14 +76,23 @@ def on_divide():
 # get the image files to overlay the buttons
 
 img0 = Image.open("0.png")
+
 img1 = Image.open("1.png")
+
 img2 = Image.open("2.png")
+
 img3 = Image.open("3.png")
+
 img4 = Image.open("4.png")
+
 img5 = Image.open("5.png")
+
 img6 = Image.open("6.png")
+
 img7 = Image.open("7.png")
+
 img8 = Image.open("8.png")
+
 img9 = Image.open("9.png")
 
 imgmultiply = Image.open("multiply.png")
