@@ -7,8 +7,8 @@ main.configure(bg="#24292e")
 
 main.resizable(False, False)
 
-current = Entry(main, width=35, borderwidth=5)
-current.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+current = Entry(main, width=35, borderwidth=5, height=50)
+current.grid(row=0, column=0, columnspan=4, padx=10, pady=10, )
 
 def on_clear():
     current.delete(0, END)
