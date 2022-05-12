@@ -1,45 +1,45 @@
-from tkinter import *
-from PIL import Image, ImageTk
+from tkinter import * # imports tkinter module but all of it
+from PIL import Image, ImageTk # imports the pillow module but only the Image and ImageTK names
 
-main = Tk()
-main.title("Calculator")
-main.configure(bg="#24292e")
+main = Tk() # creates a tkinter window
+main.title("Calculator") # sets the title of the window 
+main.configure(bg="#24292e") # sets the bg colour of the window
 
-main.resizable(False, False)
+main.resizable(False, False) # makes the window non-resizzable which i think looks cleaner for the calculator
 
-current = Entry(main, width=35, borderwidth=5, )
-current.grid(row=0, column=0, columnspan=4, padx=10, pady=10 )
+current = Entry(main, width=35, borderwidth=5, ) # makes a entry box object as a variable
+current.grid(row=0, column=0, columnspan=4, padx=10, pady=10 ) # places the object into the tkinter grid in 0,0
 
-def on_clear():
-    current.delete(0, END)
+def on_clear(): # makes a function for the clear button 
+    current.delete(0, END) # deletes the "current" variable but the first int. on the table
 
-def on_click(number):
-    update = current.get()
-    current.delete(0, END)
-    current.insert(0, str(update) + str(number) )
+def on_click(number): # makes a function with a variable that gets changed when the function is called 
+    update = current.get() # updates the current int. in the variable 
+    current.delete(0, END) # then deletes the current variable
+    current.insert(0, str(update) + str(number) ) # updates current to be a string and then adds the new string of the updated number
 
-def on_equal():
-    int2 = current.get()
-    current.delete(0, END)
+def on_equal(): # makes a function for the equal button 
+    int2 = current.get() # makes a second variable that we use for the a operation
+    current.delete(0, END) # deletes the current variable
 
-    if operation == "addition":
-        current.insert(0, num1 + float(int2))
-    if operation == "subtraction":
-        current.insert(0, num1 - float(int2))
-    if operation == "multiplication":
-        current.insert(0, num1 * float(int2))
-    if operation == "division":
-        current.insert(0, num1 / float(int2))
-
-
+    if operation == "addition": # if the operation variable = addition then:
+        current.insert(0, num1 + float(int2)) # gets the num1 variable and adds it to the int2 variable but also floats it so then we can have decimals
+    if operation == "subtraction": # if the operation variable = subtraction then:
+        current.insert(0, num1 - float(int2))# gets the num1 variable and subtracts it to the int2 variable
+    if operation == "multiplication": # if the operation variable = multiplication then:
+        current.insert(0, num1 * float(int2)) # gets the num1 variable and multiplies it to the int2 variable
+    if operation == "division": # if the operation variable = division then:
+        current.insert(0, num1 / float(int2)) # gets the num1 variable and divides it to the int2 variable
 
 
-def on_add():
+
+
+def on_add(): # makes a function for add button
     int1 = current.get()
-    global num1
-    global operation 
-    operation = "addition"
-    num1 = float(int1)
+    global num1 # makes the num1 variable global
+    global operation # makes the operation variable global
+    operation = "addition" # makes the operation variable = addition 
+    num1 = float(int1) # makes the int1 variable float for 
     current.delete(0, END)
 
 
