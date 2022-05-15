@@ -75,37 +75,37 @@ def on_divide():
 
 # get the image files to overlay the buttons
 
-img0 = Image.open("0.png")
+img0 = Image.open("0.png") # opens the image file
 
-img1 = Image.open("1.png")
+img1 = Image.open("1.png") # opens the image file
 
-img2 = Image.open("2.png")
+img2 = Image.open("2.png") # opens the image file
 
-img3 = Image.open("3.png")
+img3 = Image.open("3.png") # opens the image file
 
-img4 = Image.open("4.png")
+img4 = Image.open("4.png") # opens the image file
 
-img5 = Image.open("5.png")
+img5 = Image.open("5.png") # opens the image file
 
-img6 = Image.open("6.png")
+img6 = Image.open("6.png") # opens the image file
 
-img7 = Image.open("7.png")
+img7 = Image.open("7.png") # opens the image file
 
-img8 = Image.open("8.png")
+img8 = Image.open("8.png") # opens the image file
 
-img9 = Image.open("9.png")
+img9 = Image.open("9.png") # opens the image file
 
-imgmultiply = Image.open("multiply.png")
-imgplus = Image.open("plus.png")
-imgminus = Image.open("minus.png")
-imgdivide = Image.open("divide.png")
-imgequal = Image.open("equal.png")
-imgclear =Image.open("clear.png")
-imgdecimal = Image.open("decimal.png")
+imgmultiply = Image.open("multiply.png") # opens the image file
+imgplus = Image.open("plus.png") # opens the image file
+imgminus = Image.open("minus.png") # opens the image file
+imgdivide = Image.open("divide.png") # opens the image file
+imgequal = Image.open("equal.png") # opens the image file
+imgclear =Image.open("clear.png") # opens the image file
+imgdecimal = Image.open("decimal.png") # opens the image file
 
 #resize images
-szdimg0 = img0.resize((165, 75), Image.ANTIALIAS)
-rzd_img0= ImageTk.PhotoImage(szdimg0)
+szdimg0 = img0.resize((165, 75), Image.ANTIALIAS)  # resizes the image and stores it as a new variable 
+rzd_img0= ImageTk.PhotoImage(szdimg0) # constructs a new image based on last cmd
 
 szdimg1 = img1.resize((75, 75), Image.ANTIALIAS)
 rzd_img1= ImageTk.PhotoImage(szdimg1)
@@ -156,8 +156,8 @@ szdimgdecimal = imgdecimal.resize((75, 75), Image.ANTIALIAS)
 rzd_imgdecimal= ImageTk.PhotoImage(szdimgdecimal)
 
 button0 = Button(main, text="0", image=rzd_img0, command=lambda: on_click(0), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) #footnote 1 at bottom about Lambda
-button1 = Button(main, text="1", image=rzd_img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, bd=0, highlightbackground='#24292e')
-button2 = Button(main, text="2", image=rzd_img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button1 = Button(main, text="1", image=rzd_img1, command=lambda: on_click(1), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
+button2 = Button(main, text="2", image=rzd_img2, command=lambda: on_click(2), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,) # makes a button, overlays "rzd_img1", runs "onclick" cmd when button pressed, sets borderwidth, highlight, padding to 0 screenunits
 button3 = Button(main, text="3", image=rzd_img3, command=lambda: on_click(3), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button4 = Button(main, text="4", image=rzd_img4, command=lambda: on_click(4), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
 button5 = Button(main, text="5", image=rzd_img5, command=lambda: on_click(5), borderwidth=0, highlightthickness=0, padx=0, pady=0, bd=0,)
@@ -177,7 +177,7 @@ decimalbutton = Button(main, text=".", image=rzd_imgdecimal, borderwidth=0, high
                                                           
 # making button widgets or objects or something for the GUI
 
-button0.grid(row=5, column=0, columnspan = 2)
+button0.grid(row=5, column=0, columnspan = 2) # maps button0 to the tkinter grid on row 5, column 0 and spanning 2 columns 
 
 button1.grid(row=4, column=0)
 button2.grid(row=4, column=1)
@@ -199,6 +199,6 @@ plusbutton.grid(row=4, column=3)
 equalbutton.grid(row=5, column=3)
 decimalbutton.grid(row=5, column=2)
 
-main.mainloop()
+main.mainloop() # runs the main loop 
 
 #Fn1 (l17) since we cant put function parameters through buttons we have to use lambda
