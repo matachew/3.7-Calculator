@@ -7,7 +7,7 @@ main.configure(bg="#24292e") # sets the bg colour of the window
 
 main.resizable(False, False) # makes the window non-resizzable which i think looks cleaner for the calculator
 
-errorlist = ["Value Error - two decimal places", "Name Error", "Zero Divison Error - Bro what 😭"]
+errorlist = ["Value Error - two decimal places", "Name Error - Unknown", "Zero Divison Error - unable to divide by 0"]
 
 
 current = Entry(main, width=35, borderwidth=5, ) # makes a entry box object as a variable
