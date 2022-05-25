@@ -7,7 +7,12 @@ main.configure(bg="#24292e") # sets the bg colour of the window
 
 main.resizable(False, False) # makes the window non-resizzable which i think looks cleaner for the calculator
 
+errorlist = ["Value Error - two decimal places", "Name Error", "Zero Divison Error - Bro what 😭"]
+
+
 current = Entry(main, width=35, borderwidth=5, ) # makes a entry box object as a variable
+
+
 current.grid(row=0, column=0, columnspan=4, padx=10, pady=10 ) # places the object into the tkinter grid in 0,0
 
 def on_clear(): # makes a function for the clear button 
@@ -21,15 +26,23 @@ def on_click(number): # makes a function with a variable that gets changed when 
 def on_equal(): # makes a function for the equal button 
     int2 = current.get() # makes a second variable that we use for the a operation
     current.delete(0, END) # deletes the current variable
-
-    if operation == "addition": # if the operation variable = addition then:
-        current.insert(0, num1 + float(int2)) # gets the num1 variable and adds it to the int2 variable but also floats it so then we can have decimals
-    if operation == "subtraction": # if the operation variable = subtraction then:
-        current.insert(0, num1 - float(int2))# gets the num1 variable and subtracts it to the int2 variable
-    if operation == "multiplication": # if the operation variable = multiplication then:
-        current.insert(0, num1 * float(int2)) # gets the num1 variable and multiplies it to the int2 variable
-    if operation == "division": # if the operation variable = division then:
-        current.insert(0, num1 / float(int2)) # gets the num1 variable and divides it to the int2 variable
+    try:
+        if operation == "addition": # if the operation variable = addition then:
+            current.insert(0, num1 + float(int2)) # gets the num1 variable and adds it to the int2 variable but also floats it so then we can have decimals
+        if operation == "subtraction": # if the operation variable = subtraction then:
+            current.insert(0, num1 - float(int2))# gets the num1 variable and subtracts it to the int2 variable
+        if operation == "multiplication": # if the operation variable = multiplication then:
+            current.insert(0, num1 * float(int2)) # gets the num1 variable and multiplies it to the int2 variable
+        if operation == "division": # if the operation variable = division then:
+            current.insert(0, num1 / float(int2)) # gets the num1 variable and divides it to the int2 variable
+    except (ValueError):
+        print("error in calculator")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[0]) )
+    except (ZeroDivisionError):
+        print("Zero Divison Error")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[2]) )
 
 
 
@@ -39,7 +52,16 @@ def on_add(): # makes a function for add button
     global num1 # makes the num1 variable global
     global operation # makes the operation variable global
     operation = "addition" # makes the operation variable = addition 
-    num1 = float(int1) # makes the int1 variable float for 
+    try:
+        num1 = float(int1) # makes the int1 variable float for 
+    except (ValueError):
+        print("error in calculator")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[0]) )
+    except (ZeroDivisionError):
+        print("Zero Divison Error")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[2]) )
     current.delete(0, END)
 
 
@@ -48,7 +70,17 @@ def on_minus():
     global num1
     global operation 
     operation = "subtraction"
-    num1 = float(int1)
+    try:
+        num1 = float(int1)
+    except (ValueError):
+        print("error in calculator")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[0]) )
+    except (ZeroDivisionError):
+        print("Zero Divison Error")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[2]) )
+
     current.delete(0, END)
 
 def on_multiply():
@@ -56,8 +88,17 @@ def on_multiply():
     global num1
     global operation 
     operation = "multiplication"
-    num1 = float(int1)
-    current.delete(0, END)
+    try:
+        num1 = float(int1)
+    except (ValueError):
+        print("error in calculator")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[0]) )
+    except (ZeroDivisionError):
+        print("Zero Divison Error")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[2]) )
+
 
 
 def on_divide():
@@ -65,7 +106,17 @@ def on_divide():
     global num1
     global operation 
     operation = "division"
-    num1 = float(int1)
+    try:
+        num1 = float(int1)
+    except (ValueError):
+        print("error in calculator")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[0]) )
+    except (ZeroDivisionError):
+        print("Zero Divison Error")
+        current.delete(0, END)
+        current.insert(0, str(errorlist[2]) )
+        
     current.delete(0, END)
 
 
